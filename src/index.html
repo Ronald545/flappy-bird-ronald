@@ -2,14 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flapp Bird</title>
+    <meta name="Description" content="Flappy Bird Game By Ronald Pang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flappy Bird</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="button-con">
+        <button class="button">Start Game</button>
+    </div>
+
     <div class="container">
-        <canvas width="500px" height="500px" id="c"></canvas>
+        <div class="loading"></div>
+        
+        <canvas width="350" height="350"id="c"></canvas>
+    
+        <button class="flap">Flap</button>
+
+        <div class="control">
+            <label for="speed">
+                <h6 class="label">Level Speed</h6>
+                <input type="range" name="speed" id="speed" min="8" max="15" value="9">
+            </label>
+
+            <label for="gapSize">
+                <h6 class="label">Gap Height</h6>
+                <input type="range" name="gapSize" id="gapSize" min="100" max="170" value="150">
+            </label>
+        </div>
     </div>
 
     <script src="./scripts.js"></script>
