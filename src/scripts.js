@@ -3,12 +3,13 @@ const loading = document.querySelector('.loading');
 const speedSlider = document.querySelector('#speed');
 const gapSizeSlider = document.querySelector('#gapSize');
 const flapButton = document.querySelector('button.flap');
-const canvasContainer = document.querySelector('.container');
+const pipeWidthSlider = document.querySelector('#pipeWidth');
 
 let startGameCounter = 0;
 let startGame = false;
 let gameSpeed = 8;
 let pipeGap = 150;
+let pipeWidth = 50;
 
 speedSlider.addEventListener('change', () => {
     console.log(gameSpeed)
@@ -18,6 +19,11 @@ speedSlider.addEventListener('change', () => {
 gapSizeSlider.addEventListener('change', () => {
     console.log(pipeGap)
     pipeGap = parseInt(gapSizeSlider.value);
+})
+
+pipeWidthSlider.addEventListener('change', () => {
+    console.log(pipeWidth);
+    pipeWidth = parseInt(pipeWidthSlider.value);
 })
 
 startButton.onclick = () => {
@@ -46,7 +52,6 @@ startButton.onclick = () => {
             let birdDY = 0;
 
             let pipeX = 400;
-            let pipeWidth = 50;
             let topPipeBottomY = 24;
 
             let bestScore = 0;

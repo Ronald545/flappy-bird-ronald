@@ -55,3 +55,9 @@ button.flap {
 .hidden {
   display: none;
 }
+
+div.control {
+  background-color: #ededed;
+  padding: 15px;
+  margin-top: 5px;
+}
