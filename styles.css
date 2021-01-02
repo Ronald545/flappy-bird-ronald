@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+}
+
+div.container {
+  margin: auto;
+  width: 500px;
+}
